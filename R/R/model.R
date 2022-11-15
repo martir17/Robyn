@@ -734,8 +734,7 @@ robyn_mmm <- function(InputCollect,
               lambda = lambda_scaled,
               lower.limits = lower.limits,
               upper.limits = upper.limits,
-              intercept_sign = intercept_sign,
-              intercept = FALSE
+              intercept_sign = intercept_sign
             )
             decompCollect <- model_decomp(
               coefs = mod_out$coefs,
