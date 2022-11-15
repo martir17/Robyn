@@ -717,7 +717,8 @@ robyn_mmm <- function(InputCollect,
               lower.limits = lower.limits,
               upper.limits = upper.limits,
               type.measure = "mse",
-              penalty.factor = penalty.factor
+              penalty.factor = penalty.factor,
+              intercept = FALSE
             ) # plot(glm_mod); coef(glm_mod)
 
             # # When we used CV instead of nevergrad
@@ -733,7 +734,8 @@ robyn_mmm <- function(InputCollect,
               lambda = lambda_scaled,
               lower.limits = lower.limits,
               upper.limits = upper.limits,
-              intercept_sign = intercept_sign
+              intercept_sign = intercept_sign,
+              intercept = FALSE
             )
             decompCollect <- model_decomp(
               coefs = mod_out$coefs,
@@ -1145,7 +1147,8 @@ model_refit <- function(x_train, y_train, lambda, lower.limits, upper.limits, in
     # https://stats.stackexchange.com/questions/138569/why-is-lambda-within-one-standard-error-from-the-minimum-is-a-recommended-valu
     lambda = lambda,
     lower.limits = lower.limits,
-    upper.limits = upper.limits
+    upper.limits = upper.limits,
+    intercept = FALSE
   ) # coef(mod)
 
   df.int <- 1
